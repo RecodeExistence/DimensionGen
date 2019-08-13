@@ -27,6 +27,8 @@ function pageLoad() { // This function is a container function for ordering the 
 	console.log(`Max Client Height Dimension: ${dimensionsArrayHeight}.`);
 	console.log(`Max Client Width Dimension: ${dimensionsArrayWidth}`);
 
+    watchWordListener(); // call watchword listener, to alert when button clicked on that span, will be used as anchor. 
+
 	/* Grabbed the homebutton and created it's event listeners */
 	let homeButton = getHomeButton();
 	homeButton.addEventListener('mouseover', addToDiv);
@@ -35,6 +37,14 @@ function pageLoad() { // This function is a container function for ordering the 
 	    function to remove the paragraph from the screen.*/
 	homeButton.addEventListener('mouseout', buttonLosesFocus);
 	viewportResizeEventListener();
+}
+
+function followButtonListener() { 
+    let buttons = document.getElementsByClassName('github-button'); 
+    for(let i = 0 ; i < buttons.length ; i++) {
+        buttons[i].addEventListener('mouseover', largerButtonsOnHover);
+    }
+    return buttons;
 }
 
 
@@ -94,6 +104,15 @@ function buttonLosesFocus() {
 	para.innerHTML = " ";
 	para.id = "buttonOut";
 	console.log(para);
+}
+
+function watchWordListener() {
+    let watchWordId = document.getElementById('watchButton'); 
+    watchWordId.addEventListener('click', watchWordClickHandler); 
+}
+
+function watchWordClickHandler() { 
+    alert('You clicked the watchword!');
 }
 
 // call the page load function, when page loads, call all the required functions to run in order. 
