@@ -27,7 +27,7 @@ function pageLoad() { // This function is a container function for ordering the 
 	console.log(`Max Client Height Dimension: ${dimensionsArrayHeight}.`);
 	console.log(`Max Client Width Dimension: ${dimensionsArrayWidth}`);
 
-    watchWordListener(); // call watchword listener, to alert when button clicked on that span, will be used as anchor. 
+    gitHubButtonEventListener(); // call gitHubButton listener, to alert when button clicked on that span, will be used as anchor. 
 
 	/* Grabbed the homebutton and created it's event listeners */
 	let homeButton = getHomeButton();
@@ -77,7 +77,7 @@ function appendToNavBar(navBarId, newPara, dimensions) {
 /* grabs home details div id, creates a new paragraph element, apends it to the new dv, 
     adds an id to the newPara element, gives it some inner html, then calls getHeadingPara element */
 function addToDiv() {
-	let divId = document.getElementById('home-details');
+	let divId = document.getElementById('top-nav-bar');
 	let newPara = document.createElement('p');
 	divId.append(newPara);
 	newPara.setAttribute('id', 'dynamicPara');
@@ -106,13 +106,13 @@ function buttonLosesFocus() {
 	console.log(para);
 }
 
-function watchWordListener() {
-    let watchWordId = document.getElementById('watchButton'); 
-    watchWordId.addEventListener('click', watchWordClickHandler); 
+function gitHubButtonEventListener(button) {
+	button = document.getElementById('follow');
+	button.addEventListener('click', gitHubButtonClicked)
 }
 
-function watchWordClickHandler() { 
-    alert('You clicked the watchword! Good Find!  This will be changed for an actual followme button in a moment.');
+function gitHubButtonClicked() { 
+    alert('Thanks for the follow!  Let\'s build something great! -TheCodingBro-');
 }
 
 // call the page load function, when page loads, call all the required functions to run in order. 
