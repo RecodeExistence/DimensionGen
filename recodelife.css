@@ -1,0 +1,47 @@
+
+
+.top-nav {
+    margin-top: 20px;
+
+    border: 2px solid red;
+    border-left: 0px;
+    border-right: 0px;
+    border-radius: 3px;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    color: royalblue;
+    background-color:#ffffff;
+    font-size: 20px;    
+}
+
+.top-nav:hover {
+    margin-top: 1%;
+    font-size: 30px;
+    padding: 15px;
+    border: 4px solid red;
+    border-top:0px;
+    border-bottom:0px;
+}
+
+
+
+#dynamicPara { 
+    margin-top: 5%;
+    margin-left: 2rem; 
+    font-size: 30px; 
+    width: 80%; 
+    height: 15%; 
+    background-color: #002C3E;
+    color: white; 
+}
+
+#headingMargin {
+    margin: 2%;
+}
+
+.editingTRMargin {
+    margin-left: 2em; 
+    margin-right: 2em; 
+    padding: 2em;
+}
