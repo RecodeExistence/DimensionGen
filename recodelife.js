@@ -112,7 +112,7 @@ function watchWordListener() {
 }
 
 function watchWordClickHandler() { 
-    alert('You clicked the watchword!');
+    alert('You clicked the watchword! Good Find!  This will be changed for an actual followme button in a moment.');
 }
 
 // call the page load function, when page loads, call all the required functions to run in order. 
