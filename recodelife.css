@@ -101,3 +101,30 @@ ul {
 	position: relative;
 	margin-top: 2em;
 }
+@media only screen and (max-width: 800px) {
+	#top-nav-bar {
+		display: grid;
+		grid-template-columns: 1fr;
+		justify-items: center;
+		width: 100vw;
+		margin: -1% -2%;
+	}
+
+	#top-nav-bar a {
+		margin: 0;
+		width: 100vw;
+		left: 0;
+		position: relative;
+		transition: padding 0.1s linear;
+	}
+
+	#top-nav-bar a:hover {
+		font-size: 24px;
+		background-color: #002c3e;
+		color: #fff;
+		padding: 5px;
+		border: 2px solid rgb(255, 145, 0);
+		border-top: 0px;
+		border-bottom: 0px;
+	}
+}
